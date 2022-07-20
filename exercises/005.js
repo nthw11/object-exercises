@@ -27,12 +27,25 @@ Starter Code :
 function transformEmployeeData(array) {
   // your code here
   let formattedData = [];
-
+  //FROM THE WEB/RESEARCH
+  //   for (let i = 0; i < array.length; i++) {
+  //     // console.log(array[i]);
+  //     let tempObj = Object.fromEntries(array[i]);
+  //     // console.log(tempObj);
+  //     formattedData.push(tempObj);
+  //   }
+  //FROM THE SOLUTIONS VIDEO
   for (let i = 0; i < array.length; i++) {
-    // console.log(array[i]);
-    let tempObj = Object.fromEntries(array[i]);
-    // console.log(tempObj);
-    formattedData.push(tempObj);
+    let employeeArr = array[i];
+    let employeeObj = {};
+    for (let j = 0; j < employeeArr.length; j++) {
+      let keyValueArray = employeeArr[j];
+      let employeeKey = keyValueArray[0];
+      let employeeValue = keyValueArray[1];
+      employeeObj[employeeKey] = employeeValue;
+    }
+    formattedData.push(employeeObj);
+    // console.log(formattedData);
   }
   return formattedData;
 }

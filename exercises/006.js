@@ -23,5 +23,17 @@ Starter Code:
 
 function convertObjectToList(obj) {
   // your code here
-  return Object.entries(obj);
+  //CHEATING!!!
+  // return Object.entries(obj);
+  //FROM THE SOLUTIONS VIDEO
+  let returnArr = [];
+
+  for (key in obj) {
+    let keyValueArray = [];
+    keyValueArray.push(key);
+    keyValueArray.push(obj[key]);
+
+    returnArr.push(keyValueArray);
+  }
+  return returnArr;
 }

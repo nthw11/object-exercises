@@ -29,10 +29,14 @@ Starter Code
 
 function listAllValues(obj) {
   // your code here
-  let returnArray = Object.values(obj);
-  // console.log(obj);
-  for (vals in obj) {
-    // console.log(vals);
+  //FROM THE WEB/RESEARCH
+  // let returnArray = Object.values(obj);
+  // for (vals in obj) {
+  // }
+  // FROM THE SOLUTIONS VIDEO
+  let returnArray = [];
+  for (prop in obj) {
+    returnArray.push(obj[prop]);
   }
   return returnArray;
 }

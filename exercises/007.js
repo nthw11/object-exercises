@@ -48,14 +48,26 @@ var customerData = {
 };
 
 function greetCustomer(firstName) {
+  // let greeting = `Welcome! Is this your first time?`;
+
+  // if (customerData[firstName]) {
+  //   let visited = customerData[firstName];
+  //   let numVisits = Object.values(visited);
+  //   // console.log(numVisits);
+
+  //   if (numVisits[0] === 1) {
+  //     greeting = `Welcome back, ${firstName}! We're glad you liked us the first time!`;
+  //   } else {
+  //     greeting = `Welcome back, ${firstName}! So glad to see you again!`;
+  //   }
+  // }
+  // return greeting;
+
+  //FROM SOLUTIONS VIDEO
   let greeting = `Welcome! Is this your first time?`;
-
   if (customerData[firstName]) {
-    let visited = customerData[firstName];
-    let numVisits = Object.values(visited);
-    console.log(numVisits);
-
-    if (numVisits[0] === 1) {
+    let numVisits = customerData[firstName].visits;
+    if (numVisits === 1) {
       greeting = `Welcome back, ${firstName}! We're glad you liked us the first time!`;
     } else {
       greeting = `Welcome back, ${firstName}! So glad to see you again!`;

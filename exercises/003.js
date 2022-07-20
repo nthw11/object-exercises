@@ -22,9 +22,16 @@ Starter Code:
 function fromListToObject(array) {
   // your code here
   let returnObj = {};
-  for (keyVal of array) {
-    const [key, val] = keyVal;
-    returnObj[key] = val;
+  //FROM THE WEB/RESEARCH
+  // for (keyVal of array) {
+  //   const [key, val] = keyVal;
+  //   returnObj[key] = val;
+  // }
+
+  // FROM THE SOLUTION VIDEO
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    returnObj[element[0]] = element[1];
   }
   return returnObj;
 }
