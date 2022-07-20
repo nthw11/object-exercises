@@ -26,5 +26,13 @@ Starter Code :
 
 function transformEmployeeData(array) {
   // your code here
+  let formattedData = [];
 
+  for (let i = 0; i < array.length; i++) {
+    // console.log(array[i]);
+    let tempObj = Object.fromEntries(array[i]);
+    // console.log(tempObj);
+    formattedData.push(tempObj);
+  }
+  return formattedData;
 }

@@ -33,24 +33,33 @@ Starter Code :
 */
 
 var customerData = {
-  'Joe': {
-    visits: 1
+  Joe: {
+    visits: 1,
   },
-  'Carol': {
-    visits: 2
+  Carol: {
+    visits: 2,
   },
-  'Howard': {
-    visits: 3
+  Howard: {
+    visits: 3,
   },
-  'Carrie': {
-    visits: 4
-  }
+  Carrie: {
+    visits: 4,
+  },
 };
 
 function greetCustomer(firstName) {
-  var greeting = '';
-  // your code here
+  let greeting = `Welcome! Is this your first time?`;
 
+  if (customerData[firstName]) {
+    let visited = customerData[firstName];
+    let numVisits = Object.values(visited);
+    console.log(numVisits);
+
+    if (numVisits[0] === 1) {
+      greeting = `Welcome back, ${firstName}! We're glad you liked us the first time!`;
+    } else {
+      greeting = `Welcome back, ${firstName}! So glad to see you again!`;
+    }
+  }
   return greeting;
 }
-

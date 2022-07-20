@@ -29,5 +29,10 @@ Starter Code
 
 function listAllValues(obj) {
   // your code here
-
+  let returnArray = Object.values(obj);
+  // console.log(obj);
+  for (vals in obj) {
+    // console.log(vals);
+  }
+  return returnArray;
 }

@@ -24,4 +24,10 @@ function transformFirstAndLast(array) {
 
 function transformFirstAndLast(array) {
   //your code here
+  let returnObj = {};
+  returnObj[array[0]] = array[array.length - 1];
+  // console.log(returnObj);
+  return returnObj;
 }
+
+transformFirstAndLast[('Queen', 'Elizabeth', 'Of Hearts', 'Beyonce')];
